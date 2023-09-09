@@ -1,9 +1,9 @@
 @import url('font-inter.css');
 :root {
-  --primarycolor: #AEEBDC;
-  --primarycolorhover: #DED7FB;
-  --btnice:#DED7FB;
-  --btnnicetext:#DED7FB;
+  --primarycolor: #7acbc8 !Important;
+  --primarycolorhover: #225856 !Important;
+  --btnice:#225856 !Important;
+  --btnnicetext:#225856 !Important;
 }
 
 body{
@@ -81,7 +81,7 @@ body{
 }
 
 .input-text:focus{
-    border: 1px solid rgb(10,118,216);
+    border: 1px solid rgb(122, 203, 200);
     transition: 0.2s;
 }
 
@@ -105,7 +105,7 @@ body{
 }
 
 
-.btn:hover{
+.btn-hover{
     background-color: var(--primarycolorhover);
     box-shadow: none;
     transition: all 0.5s;
@@ -123,7 +123,7 @@ body{
 
 .btn-primary-soft{
     background-color: #D8EBFA ;
-    /*border: 1px solid rgba(57,108,240,0.1) ;*/    color: #1969AA;
+    /*border: 1px solid rgba(57,108,240,0.1) ;*/    color: #7acbc8;
     font-weight: 500;
     font-size: 16px;
     border: none;
@@ -313,7 +313,7 @@ input[type=search]:focus {
 
 .button-icon{
   
-  background-position: 10px 50%;
+  background-position: -10px 50%;
   background-repeat: no-repeat;
   transition: 0.5s;
   padding: 8px 20px 8px 40px;
@@ -390,7 +390,7 @@ input[type=search]:focus {
   background-image: url('../img/icons/session.svg');
 }
 .menu-icon-home{
-  background-image: url('../img/icons/home.svg');
+  background-image: url('../img/icons/dashboard.svg');
 }
 
 
@@ -417,7 +417,7 @@ input[type=search]:focus {
   background-image: url('../img/icons/book-hover.svg');
 }
 .menu-icon-patient:hover,.menu-icon-patient-active{
-  color: var(--primarycolor);
+  
   
   background-image: url('../img/icons/patients-hover.svg');
 }
@@ -436,7 +436,7 @@ input[type=search]:focus {
 .menu-icon-home:hover,.menu-icon-home-active{
   color: var(--primarycolor);
   
-  background-image: url('../img/icons/home-iceblue.svg');
+  background-image: url('../img/icons/dashboard-hover.svg');
 }
 
 
@@ -445,7 +445,7 @@ input[type=search]:focus {
 
 .btn-icon-back{
   background-image: url('../img/icons/back-iceblue.svg');
-  background-position: 18px 50%;
+  background-position: -1px 50%;
   background-repeat: no-repeat;
   transition: 0.5s;
   padding: 8px 20px 8px 40px;

@@ -53,7 +53,7 @@
                                 </td>
                                 <td style="padding:0px;margin:0px;">
                                     <p class="profile-title">Administrator</p>
-                                    <p class="profile-subtitle">admin@thejobs.com</p>
+                                    <p class="profile-subtitle">admin@gmail.com</p>
                                 </td>
                             </tr>
                             <tr>
@@ -65,25 +65,29 @@
                     </td>
                 
                 </tr>
-                
+                 <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-dashbord" >
+                        <a href="index.php" class="non-style-link-menu"><div><p class="menu-text">Dashboard</p></a></div></a>
+                    </td>
+                </tr>
                 <tr class="menu-row">
-                    <td>
-                        <a href="doctors.php" class="non-style-link-menu "><div><p class="menu-text">Consultants</p></a></div>
+                    <td class="menu-btn menu-icon-doctor ">
+                        <a href="consultants.php" class="non-style-link-menu "><div><p class="menu-text">Consultants</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td>
+                    <td class="menu-btn menu-icon-schedule btn-hover menu-active menu-icon-schedule-active">
                         <a href="schedule.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Schedule</p></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row">
-                    <td>
+                    <td class="menu-btn menu-icon-appoinment">
                         <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">Appointment</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td>
-                        <a href="patient.php" class="non-style-link-menu"><div><p class="menu-text">Customers</p></a></div>
+                    <td class="menu-btn menu-icon-patient">
+                        <a href="customer.php" class="non-style-link-menu"><div><p class="menu-text">Customers</p></a></div>
                     </td>
                 </tr>
 
@@ -93,7 +97,7 @@
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
                     <td width="13%" >
-                    <a href="schedule.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
+                    <a href="index.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
                     </td>
                     <td>
                         <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Shedule Manager</p>
@@ -147,7 +151,7 @@
                            <td width="10%">
 
                            </td> 
-                        <td width="5%" style="text-align: center;">
+                        <td width="5%" style="text-align: left;">
                         Date:
                         </td>
                         <td width="30%">
@@ -156,7 +160,7 @@
                             <input type="date" name="sheduledate" id="date" class="input-text filter-container-items" style="margin: 0;width: 95%;">
 
                         </td>
-                        <td width="5%" style="text-align: center;">
+                        <td width="5%" style="text-align: left;">
                         Consultants:
                         </td>
                         <td width="30%">
@@ -302,10 +306,10 @@
                                     $scheduletime=$row["scheduletime"];
                                     $nop=$row["nop"];
                                     echo '<tr>
-                                        <td> &nbsp;'.
+                                        <td style="text-align:center;"> &nbsp;'.
                                         substr($title,0,30)
                                         .'</td>
-                                        <td>
+                                        <td style="text-align:center;">
                                         '.substr($docname,0,20).'
                                         </td>
                                         <td style="text-align:center;">
@@ -386,13 +390,13 @@
                             <tr>
                                 
                                 <td class="label-td" colspan="2">
-                                    <label for="docid" class="form-label">Select Doctor: </label>
+                                    <label for="docid" class="form-label">Select Consaltant: </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
                                     <select name="docid" id="" class="box" >
-                                    <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br/>';
+                                    <option value="" disabled selected hidden>Choose Consaltant Name from the list</option><br/>';
                                         
         
                                         $list11 = $database->query("select  * from  doctor order by docname asc;");
@@ -412,7 +416,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="nop" class="form-label">Number of Patients/Appointment Numbers : </label>
+                                    <label for="nop" class="form-label">Number of Customer/Appointment Numbers : </label>
                                 </td>
                             </tr>
                             <tr>
@@ -552,7 +556,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="Email" class="form-label">Doctor of this session: </label>
+                                    <label for="Email" class="form-label">Consaltant of this session: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -582,7 +586,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label"><b>Patients that Already registerd for this session:</b> ('.$result12->num_rows."/".$nop.')</label>
+                                    <label for="spec" class="form-label"><b>Customers that Already registerd for this session:</b> ('.$result12->num_rows."/".$nop.')</label>
                                     <br><br>
                                 </td>
                             </tr>
@@ -596,20 +600,20 @@
                                  <thead>
                                  <tr>   
                                         <th class="table-headin">
-                                             Patient ID
+                                             Customer ID
                                          </th>
                                          <th class="table-headin">
-                                             Patient name
+                                             Customer name
                                          </th>
                                          <th class="table-headin">
                                              
-                                             Appointment number
+                                             Appointment Number
                                              
                                          </th>
                                         
                                          
                                          <th class="table-headin">
-                                             Patient Telephone
+                                             Customer Telephone
                                          </th>
                                          
                                  </thead>

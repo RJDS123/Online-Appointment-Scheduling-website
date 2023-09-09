@@ -79,7 +79,7 @@
     }
     
 
-    header("location: doctors.php?action=add&error=".$error);
+    header("location: consultants.php?action=add&error=".$error);
     ?>
     
    

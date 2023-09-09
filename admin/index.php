@@ -57,7 +57,7 @@
                                 </td>
                                 <td style="padding:0px;margin:0px;">
                                     <p class="profile-title">Administrator</p>
-                                    <p class="profile-subtitle">admin@thejobs.com</p>
+                                    <p class="profile-subtitle">admin@gmail.com</p>
                                 </td>
                             </tr>
                             <tr>
@@ -69,13 +69,13 @@
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-dashbord menu-active menu-icon-dashbord-active" >
+                    <td class="menu-btn menu-icon-dashbord btn-hover menu-active menu-icon-dashbord-active" >
                         <a href="index.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Dashboard</p></a></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row">
                     <td class="menu-btn menu-icon-doctor ">
-                        <a href="doctors.php" class="non-style-link-menu "><div><p class="menu-text">Doctors</p></a></div>
+                        <a href="consultants.php" class="non-style-link-menu "><div><p class="menu-text">Consultants</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
@@ -90,7 +90,7 @@
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-patient">
-                        <a href="patient.php" class="non-style-link-menu"><div><p class="menu-text">Patients</p></a></div>
+                        <a href="customer.php" class="non-style-link-menu"><div><p class="menu-text">Customers</p></a></div>
                     </td>
                 </tr>
             </table>
@@ -102,9 +102,9 @@
                             
                             <td colspan="2" class="nav-bar" >
                                 
-                                <form action="doctors.php" method="post" class="header-search">
+                                <form action="consultants.php" method="post" class="header-search">
         
-                                    <input type="search" name="search" class="input-text header-searchbar" placeholder="Search Doctor name or Email" list="doctors">&nbsp;&nbsp;
+                                    <input type="search" name="search" class="input-text header-searchbar" placeholder="Search Consultants name or Email" list="doctors">&nbsp;&nbsp;
                                     
                                     <?php
                                         echo '<datalist id="doctors">';
@@ -172,7 +172,7 @@
                                                     <?php    echo $doctorrow->num_rows  ?>
                                                 </div><br>
                                                 <div class="h3-dashboard">
-                                                    Doctors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    Consultants &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 </div>
                                         </div>
                                                 <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/doctors-hover.svg');"></div>
@@ -185,7 +185,7 @@
                                                     <?php    echo $patientrow->num_rows  ?>
                                                 </div><br>
                                                 <div class="h3-dashboard">
-                                                    Patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    Customers &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 </div>
                                         </div>
                                                 <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/patients-hover.svg');"></div>
@@ -198,20 +198,20 @@
                                                     <?php    echo $appointmentrow ->num_rows  ?>
                                                 </div><br>
                                                 <div class="h3-dashboard" >
-                                                    NewBooking &nbsp;&nbsp;
+                                                    NewBooking &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 </div>
                                         </div>
                                                 <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../img/icons/book-hover.svg');"></div>
                                     </div>
                                 </td>
                                 <td style="width: 25%;">
-                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;padding-top:26px;padding-bottom:26px;">
+                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;  ">
                                         <div>
                                                 <div class="h1-dashboard">
                                                     <?php    echo $schedulerow ->num_rows  ?>
                                                 </div><br>
-                                                <div class="h3-dashboard" style="font-size: 15px">
-                                                    Today Sessions
+                                                <div class="h3-dashboard" >
+                                                    Today Sessions &nbsp;
                                                 </div>
                                         </div>
                                                 <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/session-iceblue.svg');"></div>
@@ -241,19 +241,19 @@
                                     </p>
                                     <p style="padding-bottom:19px;padding-left:50px;font-size:15px;font-weight:500;color:#212529e3;line-height: 20px;">
                                         Here's Quick access to Upcoming Appointments until 7 days<br>
-                                        More details available in @Appointment section.
+                                        More details available in Appointment section.
                                     </p>
 
                                 </td>
                                 <td>
-                                    <p style="text-align:right;padding:10px;padding-right:48px;padding-bottom:0;font-size:23px;font-weight:700;color:var(--primarycolor);">
+                                    <p style="padding:10px;padding-left:48px;padding-bottom:0;font-size:23px;font-weight:700;color:var(--primarycolor);">
                                         Upcoming Sessions  until Next <?php  
                                         echo date("l",strtotime("+1 week"));
                                         ?>
                                     </p>
-                                    <p style="padding-bottom:19px;text-align:right;padding-right:50px;font-size:15px;font-weight:500;color:#212529e3;line-height: 20px;">
+                                    <p style="padding-bottom:19px;padding-left:50px;font-size:15px;font-weight:500;color:#212529e3;line-height: 20px;">
                                         Here's Quick access to Upcoming Sessions that Scheduled until 7 days<br>
-                                        Add,Remove and Many features available in @Schedule section.
+                                        More details available in Schedule section.
                                     </p>
                                 </td>
                             </tr>
@@ -264,18 +264,19 @@
                                         <table width="85%" class="sub-table scrolldown" border="0">
                                         <thead>
                                         <tr>    
-                                                <th class="table-headin" style="font-size: 12px;">
+                                                <th class="table-headin" >
                                                         
-                                                    Appointment number
+                                                    Appointment <br>
+													number
                                                     
                                                 </th>
                                                 <th class="table-headin">
-                                                    Patient name
+                                                    Customer name
                                                 </th>
                                                 <th class="table-headin">
                                                     
                                                 
-                                                    Doctor
+                                                    Consultant
                                                     
                                                 </th>
                                                 <th class="table-headin">
@@ -326,22 +327,22 @@
                                                     echo '<tr>
 
 
-                                                        <td style="text-align:center;font-size:23px;font-weight:500; color: var(--btnnicetext);padding:20px;">
+                                                        <td style="text-align:center;font-size:15px;font-weight:500;color:#212529e3;line-height: 20px;">
                                                             '.$apponum.'
                                                             
                                                         </td>
 
-                                                        <td style="font-weight:600;"> &nbsp;'.
+                                                        <td style="text-align:center;font-size:15px;font-weight:500;color:#212529e3;line-height: 20px;"> &nbsp;'.
                                                         
                                                         substr($pname,0,25)
                                                         .'</td >
-                                                        <td style="font-weight:600;"> &nbsp;'.
+                                                        <td style="text-align:center;font-size:15px;font-weight:500;color:#212529e3;line-height: 20px;"> &nbsp;'.
                                                         
                                                             substr($docname,0,25)
                                                             .'</td >
                                                            
                                                         
-                                                        <td>
+                                                        <td style="text-align:center;font-size:15px;font-weight:500;color:#212529e3;line-height: 20px;">
                                                         '.substr($title,0,15).'
                                                         </td>
 
@@ -372,7 +373,7 @@
                                                 </th>
                                                 
                                                 <th class="table-headin">
-                                                    Doctor
+                                                    Consultant
                                                 </th>
                                                 <th class="table-headin">
                                                     
@@ -416,13 +417,13 @@
                                                     $scheduletime=$row["scheduletime"];
                                                     $nop=$row["nop"];
                                                     echo '<tr>
-                                                        <td style="padding:20px;"> &nbsp;'.
+                                                        <td style="text-align:center;font-size:15px;font-weight:500;color:#212529e3;line-height: 20px;"> &nbsp;'.
                                                         substr($title,0,30)
                                                         .'</td>
-                                                        <td>
+                                                        <td style="text-align:center;font-size:15px;font-weight:500;color:#212529e3;line-height: 20px;">
                                                         '.substr($docname,0,20).'
-                                                        </td>
-                                                        <td style="text-align:center;">
+                                                        </td >
+                                                        <td style="text-align:center;font-size:15px;font-weight:500;color:#212529e3;line-height: 20px;">
                                                             '.substr($scheduledate,0,10).' '.substr($scheduletime,0,5).'
                                                         </td>
 

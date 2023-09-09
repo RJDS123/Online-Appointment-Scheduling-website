@@ -53,7 +53,7 @@
                                 </td>
                                 <td style="padding:0px;margin:0px;">
                                     <p class="profile-title">Administrator</p>
-                                    <p class="profile-subtitle">admin@thejobs.com</p>
+                                    <p class="profile-subtitle">admin@gmail.com</p>
                                 </td>
                             </tr>
                             <tr>
@@ -65,26 +65,29 @@
                     </td>
                 
                 </tr>
-               
+               <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-dashbord" >
+                        <a href="index.php" class="non-style-link-menu"><div><p class="menu-text">Dashboard</p></a></div></a>
+                    </td>
                 </tr>
                 <tr class="menu-row">
-                    <td >
-                        <a href="doctors.php" class="non-style-link-menu "><div><p class="menu-text">Consultants</p></a></div>
+                    <td class="menu-btn menu-icon-doctor ">
+                        <a href="consultants.php" class="non-style-link-menu "><div><p class="menu-text">Consultants</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td >
+                    <td class="menu-btn menu-icon-schedule ">
                         <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Schedule</p></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row">
-                    <td >
+                    <td class="menu-btn menu-icon-appoinment btn-hover menu-active menu-icon-appoinment-active" >
                         <a href="appointment.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Appointment</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td >
-                        <a href="patient.php" class="non-style-link-menu"><div><p class="menu-text">Customers</p></a></div>
+                    <td class="menu-btn menu-icon-patient" >
+                        <a href="customer.php" class="non-style-link-menu"><div><p class="menu-text">Customers</p></a></div>
                     </td>
                 </tr>
 
@@ -94,7 +97,7 @@
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
                     <td width="13%" >
-                    <a href="appointment.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
+                    <a href="index.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
                     </td>
                     <td>
                         <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Appointment Manager</p>
@@ -254,7 +257,7 @@
                                     
                                     </th>
                                 
-                                <th class="table-headin" style="font-size:10px">
+                                <th class="table-headin">
                                     
                                     Session Date & Time
                                     
@@ -309,25 +312,25 @@
                                     $apponum=$row["apponum"];
                                     $appodate=$row["appodate"];
                                     echo '<tr >
-                                        <td style="font-weight:600;"> &nbsp;'.
+                                        <td style="text-align:center;"> &nbsp;'.
                                         
                                         substr($pname,0,25)
                                         .'</td >
-                                        <td style="text-align:center;font-size:23px;font-weight:500; color: var(--btnnicetext);">
+                                        <td style="text-align:center;">
                                         '.$apponum.'
                                         
                                         </td>
-                                        <td>
+                                        <td style="text-align:center;">
                                         '.substr($docname,0,25).'
                                         </td>
-                                        <td>
+                                        <td style="text-align:center;">
                                         '.substr($title,0,15).'
                                         </td>
-                                        <td style="text-align:center;font-size:12px;">
+                                        <td style="text-align:center;">
                                             '.substr($scheduledate,0,10).' <br>'.substr($scheduletime,0,5).'
                                         </td>
                                         
-                                        <td style="text-align:center;">
+                                        <td style="text-align:center;font-size:15px;font-weight:500;color:#212529e3;line-height: 20px;">
                                             '.$appodate.'
                                         </td>
 
@@ -541,7 +544,7 @@
                     <div class="popup">
                     <center>
                         <h2></h2>
-                        <a class="close" href="doctors.php">&times;</a>
+                        <a class="close" href="consultants.php">&times;</a>
                         <div class="content">
                             eDoc Web App<br>
                             
@@ -610,7 +613,7 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <a href="doctors.php"><input type="button" value="OK" class="login-btn btn-primary-soft btn" ></a>
+                                    <a href="consultants.php"><input type="button" value="OK" class="login-btn btn-primary-soft btn" ></a>
                                 
                                     
                                 </td>
